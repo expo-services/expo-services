@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+        /* Basic Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: #f4f7fb; /* Light background color */
+            color: #333; /* Text color */
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333; /* Dark background for header */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        /* Navigation Links */
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff7f50; /* Hover color */
+        }
+
+        /* Image Styling */
+        .service-img {
+            display: block;
+            margin: 0 auto 20px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Collapsible Service List Styling */
+        .service-list {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .service-list li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .service-list li:hover {
+            background-color: #ffcccc;
+        }
+
+        .service-list li:before {
+            content: "▶";
+            margin-right: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .service-list li.active:before {
+            content: "▼";
+        }
+
+        .service-details {
+            display: none;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Footer (if needed) */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 0%;
+            text-align: center;
+            position: fixed;
+            width:100%;
+            height: 5%;
+            bottom: 0;
+        }
+            @keyframes colorChange {
+    0% { color: red; }
+    25% { color: orange; }
+    50% { color: yellow; }
+    75% { color: green; }
+    100% { color: blue; }
+}
+.header h1 {
+    animation: colorChange 5s infinite; /* 5 seconds for a full cycle, repeats indefinitely */
+}
+        /* Header styling */
+        .header {
+    background-color: yellow;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 7px;
+    border-bottom: 2px solid #333; /* Optional: Adds a divider below the header */
+}
+        .header img {
+            margin-right: 15px; /* Space between logo and any other content */
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 5rem;
+        }
+        .image-container {
+    display: flex;
+    align-items: left; /* Aligns images vertically (optional) */
+}
+
+
+
+    </style>
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: skyblue; /* Updated background color */
+            color: #333; /* Text color */
+        }
+    </style>
+ <!-- Updated Header -->
+    <div class="header">
+        <img src="NEW IMAGES/Logo.jpeg" alt="Logo" width="100" height="100"> 
+        <h1 style="flex-grow: 1;">
+            <marquee behavior="scroll" direction="left">EXPO RETOUCHING SERVICES</marquee>
+        </h1>
+        </div>
+        <hr>
+
+    <!-- Header -->
+    <header>
+        <h1>Our Services...</h1>
+    </header>
+
+    <!-- Navigation Links -->
+    <nav>
+        <a href="Index.html">HOME</a>
+        <a href="About Us.html">ABOUT US</a>
+        <a href="Contact Us.html">CONTACT US</a>
+        <a href="Payment.html">PAYMENT</a>&nbsp;&nbsp;
+    </nav>
+
+    <!-- Service Image -->
+    <div class="image-container">
+        <img src="NEW IMAGES/services.jpg" alt="Service Image" class="service-img">
+        <img src="NEW IMAGES/services 1.jpg" width="300" height="100" alt="Service Image" class="service-img">
+        <img src="NEW IMAGES/services 4.jpg" width="300" height="100" alt="Service Image" class="service-img">
+        <img src="NEW IMAGES/services 2.jpg" width="300" height="100" alt="Service Image" class="service-img">
+    </div>
+    <p>
+        We handle projects ranges from large corporate accounts to individual photographers portfolio work. We fulfil our client's specific 
+        requirements by dedicating creative team & project managers that thoroughly understand the client's needs and then solely work and 
+        deliver as per the client's expectations.
+
+
+    </p>
+
+    <!-- Service List -->
+    <ul class="service-list">
+        <li onclick="toggleDetails(this)"> Masking/Clipping Path Editing
+            <div id="Masking/Clipping Path Editing" class="service-details">
+                <a href="MaskingClipping Path Editing.html">Detailed description about Masking/Clipping Path Editing...</a>
+            </div>
+        </li>
+        <li onclick="toggleDetails(this)">Commercial Image Editing
+            <div id="Commercial Image Editing" class="service-details">
+                <a href="Commercial Image Editing.html">Detailed description about Commercial Image Editing...</a></div>
+        </li>
+        <li onclick="toggleDetails(this)">Beauty Retouching (Skin & Cloth)
+            <div id="beauty-retouching" class="service-details">
+                <a href="Beauty Reouching services.html">Detailed description about Beauty Retouching...</a>
+            </div>
+        </li>
+        <li onclick="toggleDetails(this)">Glamour Retouching
+            <div id="Glamour Retouching" class="service-details">
+                <a href="Glamour Retouching.html">Detailed description about Glamour Retouching...</a></div>
+        </li>
+        <li onclick="toggleDetails(this)">Object Removal
+            <div id="Object Removal" class="service-details">
+                <a href="Object Removal.html">Detailed description about Object Removal...</a></div>
+        </li>
+        <li onclick="toggleDetails(this)">Portrait Retouching
+            <div id="Portrait Retouching" class="service-details">
+                <a href="Portrait Retouching.html">Detailed description about Portrait Retouching...</a></div>
+        </li>
+        <li onclick="toggleDetails(this)">Dust Spot Removal/Cleaning
+            <div id="Spots Removing" class="service-details">
+                <a href="Dust Spots Removing or Cleaning.html">Detailed description about Dust Spot Removal...</a></div>
+        </li>
+        <li onclick="toggleDetails(this)">Image Restoration
+            <div id="Image Restoration" Class="service-details">
+                <a href="Image Restoration.html">Detailed description about Image Restoration...</a></div>
+        </li>
+        <li onclick="toggleDetails(this)">Jewelry Image Retouching
+            <div id="jewellery-retouching" class="service-details">
+                <a href="Jwellery Retouching.html">Detailed description about Jewelry Retouching...</a></div>
+        </li>
+        <li onclick="toggleDetails(this)">Automotive Retouching
+            <div id="Automotive Retouching"class="service-details">
+                <a href="Automotive Retouching.html">Detailed description about Food & Drink Retouching...</a></div>
+        </li>
+        <li onclick="toggleDetails(this)">Food & Drink Retouching
+            <div id="Food & Drink Retouching"class="service-details">
+                <a href="Food and Drink Retouching.html">Detailed description about Food & Drink Retouching...</a></div>
+        </li>
+        <li onclick="toggleDetails(this)">Real Estate Editing
+            <div id="Real Estate Editing"class="service-details">
+                <a href="Real Estate Editing.html">Detailed description about Food & Drink Retouching...</a></div>
+        </li>
+        <li onclick="toggleDetails(this)">360 Product Spin/Rotation Photo Editing
+            <div id="360 Product Spin Rotation" class="service-details">
+            <a href="360 Product SpinRotation Photo Editing.html">Detailed description about 360 Product Spin...</a></div>
+        </li>
+    </ul> <br>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Classic Retouching Services</p>
+    </footer>
+
+    <!-- JavaScript for Collapsible Service Details -->
+    <script>
+        function toggleDetails(element) {
+            const details = element.querySelector('.service-details');
+            const isActive = element.classList.contains('active');
+            
+            // Close all other services
+            document.querySelectorAll('.service-list li').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.service-details').style.display = 'none';
+            });
+
+            // Toggle the clicked service
+            if (!isActive) {
+                element.classList.add('active');
+                details.style.display = 'block';
+            } else {
+                element.classList.remove('active');
+                details.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>

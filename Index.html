@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        /* Automatic Image Slider CSS */
+        .slider {
+            width: 100%;
+            max-width: 2500px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+        }
+        .slides {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+        .slides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .slider:hover .slides {
+            animation-play-state: paused;
+        }
+        hr {
+            border: 1px solid black;
+        }
+        /* Side-by-side video and iframe */
+        .media-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px; /* Space between the video and iframe */
+            margin: 20px auto;
+        }
+        .media-container video,
+        .media-container iframe {
+            width: 45%; /* Each takes 45% of the container's width */
+            max-width: 560px; /* Prevent it from exceeding a specific width */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        @keyframes colorChange {
+    0% { color: red; }
+    25% { color: orange; }
+    50% { color: yellow; }
+    75% { color: green; }
+    100% { color: blue; }
+}
+
+.header h1 {
+    animation: colorChange 5s infinite; /* 5 seconds for a full cycle, repeats indefinitely */
+}
+        /* Header styling */
+        .header {
+    background-color: yellow;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-bottom: 2px solid #333; /* Optional: Adds a divider below the header */
+}
+        .header img {
+            margin-right: 15px; /* Space between logo and any other content */
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 5rem;
+        }
+        body {
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            background: linear-gradient(to bottom, #ff7f7f, #7fffd9); /* Gradient background */
+            color: #333; /* Default text color for readability */
+        }
+        /* Navigation styling */
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            padding: 10px 15px;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #afdd32d7;
+        }
+    </style>
+</head>
+<body>
+    <!-- Updated Header -->
+    <div class="header">
+        <img src="New Images/Logo.jpeg" alt="Logo" width="100" height="100"> 
+        <h1 style="flex-grow: 1;">
+            <marquee behavior="scroll" direction="left">EXPO RETOUCHING SERVICES</marquee>
+        </h1>
+        </div>
+        <nav class="nav-bar">&nbsp;&nbsp;
+            <a href="Index.html">Home</a>&nbsp;&nbsp;
+            <a href="About Us.html">About Us</a>&nbsp;&nbsp;
+            <a href="Services.html">Services</a>&nbsp;&nbsp;
+            <a href="Contact Us.html">Contact Us</a>&nbsp;&nbsp;
+            <a href="Payment.html">Payment</a>&nbsp;&nbsp;
+        </nav>
+    
+    <!-- Start of the Image Slider Section -->
+    <hr>
+    <div class="slider">
+        <div class="slides">
+            <img src="New Images/img1.jpg" alt="Image 1">
+            <img src="New Images/img2.jfif" alt="Image 2">
+            <img src="New Images/img5.png" alt="Image 3">
+            <img src="New Images/img6.jpg" alt="Image 4">
+            <img src="New Images/Colour Correction.JPG" alt="Image 5">
+            <img src="New Images/Food and drink retouching.JPG" alt="Image 6">
+            <img src="New Images/clothing.JPG" alt="Image 7">
+        </div>
+    </div>
+    <hr>
+    <!-- End of the Image Slider Section -->
+    
+    <script>
+        // JavaScript for Automatic Slider
+        const slides = document.querySelector('.slides');
+        const images = document.querySelectorAll('.slides img');
+        const totalImages = images.length;
+
+        let index = 0;
+
+        function slideImages() {
+            index++;
+            if (index >= totalImages) {
+                index = 0;
+            }
+            slides.style.transform = `translateX(${-index * 100}%)`;
+        }
+
+        setInterval(slideImages, 3000); // Change image every 3 seconds
+    </script>
+<style>
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px; /* Space between the two sides */
+        height: 200px; /* Make the container taller */
+    }
+    .container > div {
+        width: 45%; /* Each side takes 45% of the container width */
+        display: flex;
+        align-items: center;
+    }
+    .container > div:not(:last-child) {
+        border-right: 2px solid black; /* Vertical line between paragraphs */
+        padding-right: 20px; /* Space inside the border on the right */
+        height: 100%; /* Match the container height */
+    }
+    p {
+        margin: 0; /* Remove default margin from paragraphs */
+    }
+</style>
+</div>
+<!---SECTION-->
+<section style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; padding: 20px; box-sizing: border-box;">
+    <!-- Left Section (Aside Content) -->
+    <aside style="width: 55%; padding: 20px; box-sizing: border-box; background-color: linear-gradient(to bottom, #ff7f7f, #7fffd9); ; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+        <div class="heading-img">
+            <img width="180" height="140" src="New Images/Commitment.jpg" style="display: block; margin: 0 auto;">
+            <h2 style="text-align: center; margin: 10px 0;">Expo Retouching’s Commitment to Excellence</h2>
+        </div>
+        <p>At Expo Retouching, we come together with one purpose: <strong>to empower results for clients</strong>. We strive every day to live our values, respect our ethics, and build a diverse and talented team. We have a strong commitment to service, teamwork, integrity, and results, which are the cornerstone of our approach to clients and communities.</p>
+        <br>
+        <div class="heading-img">
+            <img width="180" height="140" src="New Images/Creativity.jpg" style="display: block; margin: 0 auto;">
+            <h2 style="text-align: center; margin: 10px 0;">Expo Retouching Tailored to Creativity</h2>
+        </div>
+        <p>We build our reputation primarily as an integrated post-production company for digital images & videos, emphasizing the relationship between marketing and visual communication to adapt to evolving market trends with the spirit of <strong>“exclusive margin of difference”</strong>.</p>
+        <p>Our solutions are designed to ensure clients get the best return, blending the principles of 3E’s—Economy, Efficiency, and Effectiveness—into our processes to achieve maximum client satisfaction.</p>
+        <img src="New Images/Step.JPG" width="100%" height="auto" alt="">
+    </aside>
+
+    <!-- Right Section (Core Values Content) -->
+    <div style="width: 40%; padding: 20px; box-sizing: border-box; background-color: linear-gradient(to bottom, #ff7f7f, #7fffd9); ; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="text-align: center; margin-bottom: 20px;">Core Values that Guide Us</h2>
+        <img src="New Images/Values.jpg" alt="Core Values" style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+        <p>We emphasize creativity, clarity of thoughts, and innovation. Among the many strengths that differentiate Expo Retouching in the global market are:</p>
+        <ul style="padding-left: 20px; list-style-type: disc;">
+            <li>Extensive industry expertise</li>
+            <li>Broad and evolving service offering</li>
+            <li>Total quality management</li>
+            <li>Workflow management</li>
+            <li>Speedy turnaround time</li>
+            <li>Proven and experienced team</li>
+            <li>Client value creation</li>
+            <li>Legacy/History with photographers</li>
+        </ul>
+    </div>
+</section>
+
+    <div style="font-size:14px; color:#333; text-align:left; width:95%; margin:0 auto;">© Copyright 2013 Expo Retouching Services Pvt. Ltd.</div>
+    
+    </body>
+
+</body>
+</html>
